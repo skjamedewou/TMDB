@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "tmdb_cli": {
+      "commandName": "Project",
+      "commandLineArgs": "playing",
+      "environmentVariables": {
+        "TMDB_API_KEY": "558406eba99e0aae09847ade683d3c95"
+      }
+    }
+  }
+}
