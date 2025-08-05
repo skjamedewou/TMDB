@@ -13,13 +13,29 @@ if (string.IsNullOrEmpty(apiKey))
 }
 else
 {
-    string name = args[0];
+    string? type = null;
 
-    Console.WriteLine($"Retrieving data for {name}");
+    for (int i = 0; i < args.Length - 1; i++)
+    {
+        if (args[i] == "--type")
+        {
+            type = args[i + 1];
+            break;
+        }
+    }
+
+    if (string.IsNullOrEmpty(type))
+    {
+        Console.WriteLine(" Missing required argument '--type'.");
+        Console.WriteLine("Usage: tmdb-cli.exe --type <playing|popular|top|upcoming>");
+        return;
+    }
+
+    Console.WriteLine($"Retrieving data for {type}");
 
     var service = new TmdbService();
 
-    string json = await service.getData(name, apiKey);
+    string json = await service.getData(type, apiKey);
 
     // Console.WriteLine(json);
 
