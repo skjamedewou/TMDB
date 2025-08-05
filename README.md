@@ -8,10 +8,10 @@ A simple command-line application written in C# that uses the [TMDB API](https:/
 #  Features
 
 - Fetches movies by category:
-  -  playing – Now playing in theaters
-  -  popular – Most popular movies
-  -  top – Top-rated movies
-  -  upcoming – Upcoming releases
+  -  `playing` – Now playing in theaters
+  -  `popular` – Most popular movies
+  -  `top` – Top-rated movies
+  -  `upcoming` – Upcoming releases
 - Clean console output
 - Uses HTTP + JSON (via `HttpClient` and `System.Text.Json`)
 - Self-contained `.exe` publishing (no .NET installation required)
@@ -40,7 +40,7 @@ A simple command-line application written in C# that uses the [TMDB API](https:/
 Before running the app, set the `TMDB_API_KEY` environment variable.
 
 # Run Examples
-tmdb-cli.exe --type playing
-tmdb-cli.exe --type popular
-tmdb-cli.exe --type top
-tmdb-cli.exe --type upcoming
+- tmdb-cli.exe --type playing
+- tmdb-cli.exe --type popular
+- tmdb-cli.exe --type top
+- tmdb-cli.exe --type upcoming
